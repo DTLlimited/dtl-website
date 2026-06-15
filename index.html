@@ -8,35 +8,37 @@
 <style>
 body {
   margin:0;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   background:#0a0a0a;
   color:#fff;
 }
 
-/* NAVBAR FIXED */
+/* NAVBAR */
 nav {
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:20px 40px;
-  background:rgba(0,0,0,0.9);
+  background:rgba(0,0,0,0.85);
   position:fixed;
   width:100%;
   top:0;
   z-index:1000;
+  backdrop-filter: blur(6px);
 }
 
 nav a {
   color:#fff;
-  margin-left:20px;
+  margin-left:25px;
   text-decoration:none;
+  font-weight:500;
 }
 
 nav a:hover {
   color:#e50914;
 }
 
-/* HERO IMAGE FIXED */
+/* HERO */
 .hero {
   height:100vh;
   display:flex;
@@ -45,57 +47,87 @@ nav a:hover {
   align-items:center;
   text-align:center;
   position:relative;
-  z-index:1;
 
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./hero.png');
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('./hero.png');
   background-size: cover;
   background-position: 70% center;
   background-repeat: no-repeat;
 }
 
+/* TEXT ANIMATION */
 .hero h1 {
-  font-size:50px;
+  font-size:55px;
   margin-top:80px;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero p {
   color:#ccc;
+  margin-top:10px;
+  animation: fadeUp 1.5s ease forwards;
 }
 
 /* BUTTON */
 .btn {
-  margin-top:20px;
-  padding:15px 30px;
+  margin-top:25px;
+  padding:15px 35px;
   background:#e50914;
   color:#fff;
   text-decoration:none;
   border-radius:6px;
+  font-weight:bold;
+  transition:0.3s;
+  animation: fadeUp 2s ease forwards;
+}
+
+.btn:hover {
+  background:#ff1f1f;
+  transform: scale(1.05);
 }
 
 /* SECTIONS */
 .section {
-  padding:60px 20px;
+  padding:80px 20px;
   text-align:center;
 }
 
 .services {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  gap:25px;
+  margin-top:30px;
 }
 
 .card {
   background:#1a1a1a;
-  padding:25px;
+  padding:30px;
   border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background:#222;
 }
 
 /* FOOTER */
 footer {
   background:#111;
-  padding:20px;
+  padding:25px;
   text-align:center;
   color:#aaa;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity:0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
 }
 </style>
 </head>
