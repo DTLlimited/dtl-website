@@ -24,7 +24,6 @@ nav {
   width:100%;
   top:0;
   z-index:1000;
-  backdrop-filter: blur(6px);
 }
 
 nav a {
@@ -33,11 +32,19 @@ nav a {
   text-decoration:none;
 }
 
-nav a:hover {
-  color:#e50914;
+/* HERO */
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding-left:8%;
+  position:relative;
+  overflow:hidden;
 }
 
-/* HERO SECTION */
+/* IMAGE FIX */
 .hero::before {
   content:"";
   position:absolute;
@@ -50,11 +57,9 @@ nav a:hover {
     linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
     url('hero.png');
 
-  background-repeat: no-repeat;
-
-  /* 🔥 THIS IS THE MAGIC FIX */
-  background-size: 100% auto;
-  background-position: center;
+  background-repeat:no-repeat;
+  background-size:100% auto;
+  background-position:center;
 
   z-index:0;
 }
@@ -83,13 +88,6 @@ nav a:hover {
   color:#fff;
   text-decoration:none;
   border-radius:6px;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover {
-  background:#ff1f1f;
-  transform: scale(1.05);
 }
 
 /* SECTIONS */
@@ -109,12 +107,6 @@ nav a:hover {
   background:#1a1a1a;
   padding:30px;
   border-radius:10px;
-  transition:0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  background:#222;
 }
 
 /* FOOTER */
@@ -123,6 +115,53 @@ footer {
   padding:25px;
   text-align:center;
   color:#aaa;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+
+  nav {
+    padding:15px 20px;
+  }
+
+  nav h2 {
+    font-size:18px;
+  }
+
+  nav a {
+    margin-left:15px;
+    font-size:14px;
+  }
+
+  .hero {
+    align-items:center;
+    text-align:center;
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .hero::before {
+    background-size:cover;
+    background-position:center;
+  }
+
+  .hero h1 {
+    font-size:32px;
+    margin-top:60px;
+  }
+
+  .hero p {
+    font-size:14px;
+  }
+
+  .btn {
+    padding:12px 25px;
+    font-size:14px;
+  }
+
+  .section {
+    padding:50px 15px;
+  }
 }
 </style>
 </head>
