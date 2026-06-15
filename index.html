@@ -13,14 +13,8 @@
 <meta name="author" content="DTL Instalations LTD">
 <meta name="robots" content="index, follow">
 
-<meta property="og:title" content="DTL Instalations LTD">
-<meta property="og:description" content="Fire alarms, electrical work & 24/7 callouts across the Midlands.">
-<meta property="og:type" content="website">
-
 <style>
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -41,7 +35,6 @@ body {
   position: relative;
 }
 
-/* DARK OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
@@ -50,23 +43,19 @@ body {
   background: rgba(0,0,0,0.6);
 }
 
-/* CONTENT */
 .hero-content {
   position: relative;
   z-index: 2;
   padding: 20px;
 }
 
-.hero h1 {
-  font-size: 30px;
-}
+.hero h1 { font-size: 30px; }
 
 .hero p {
   color: #ddd;
   font-size: 14px;
 }
 
-/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -84,7 +73,7 @@ body {
   text-align: center;
 }
 
-/* SERVICE CARDS */
+/* CARDS */
 .card {
   background: #111;
   padding: 20px;
@@ -92,12 +81,26 @@ body {
   border-radius: 8px;
 }
 
-/* CONTACT */
-.contact p {
-  margin: 5px 0;
+/* FORM */
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
 }
 
-/* STICKY CALL BAR */
+form button {
+  width: 100%;
+  padding: 15px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* CALL BAR */
 .call-bar {
   position: fixed;
   bottom: 0;
@@ -131,32 +134,50 @@ body {
 <!-- SERVICES -->
 <section class="section">
   <h2>Our Services</h2>
-
   <div class="card">🔥 Fire Alarm Installation & Maintenance</div>
   <div class="card">⚡ Full Domestic Electrical Work</div>
   <div class="card">🏠 House Rewires & Upgrades</div>
   <div class="card">💡 Emergency Lighting Systems</div>
   <div class="card">📋 Electrical Testing & Certification</div>
   <div class="card">✅ Fully Compliant With UK Regulations</div>
-
 </section>
 
 <!-- WHY CHOOSE US -->
 <section class="section">
   <h2>Why Choose Us</h2>
-
   <div class="card">✔ Qualified & Experienced Electricians</div>
   <div class="card">✔ Domestic & Commercial Work</div>
   <div class="card">✔ Fast & Reliable Service</div>
   <div class="card">✔ Midlands Based Coverage</div>
-
 </section>
 
-<!-- CONTACT -->
-<section class="section contact">
+<!-- CONTACT + QUOTE FORM -->
+<section class="section">
   <h2>Contact</h2>
   <p>📞 07415 202373</p>
   <p>📍 Midlands, UK – Covering Birmingham, Coventry, Wolverhampton & surrounding areas</p>
+
+  <h2 style="margin-top:40px;">Request a Quote</h2>
+
+  <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+    <input type="hidden" name="_replyto" value="dtlinstallations@gmail.com">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+
+    <select name="service">
+      <option>Fire Alarm Installation</option>
+      <option>Electrical Work</option>
+      <option>Rewire</option>
+      <option>Emergency Callout</option>
+    </select>
+
+    <textarea name="message" rows="4" placeholder="Describe the job..." required></textarea>
+
+    <button type="submit">Get Quote</button>
+  </form>
+
 </section>
 
 <!-- CALL BAR -->
