@@ -39,7 +39,11 @@ nav a {
 /* HERO */
 .hero {
   height: 100vh;
-  background: url('hero.png') no-repeat center center/cover;
+  background-image: url('./hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
