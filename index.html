@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DTL Limited</title>
+<title>DTL Instalations LTD</title>
 
 <style>
 html {
@@ -31,13 +31,13 @@ body {
   position: relative;
 }
 
-/* OVERLAY */
+/* DARK OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
 }
 
 /* CONTENT */
@@ -48,11 +48,12 @@ body {
 }
 
 .hero h1 {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .hero p {
   color: #ddd;
+  font-size: 14px;
 }
 
 /* BUTTON */
@@ -67,12 +68,13 @@ body {
   font-size: 16px;
 }
 
-/* SERVICES */
+/* SECTIONS */
 .section {
   padding: 60px 20px;
   text-align: center;
 }
 
+/* SERVICE CARDS */
 .card {
   background: #111;
   padding: 20px;
@@ -80,7 +82,12 @@ body {
   border-radius: 8px;
 }
 
-/* CALL BAR */
+/* CONTACT */
+.contact p {
+  margin: 5px 0;
+}
+
+/* STICKY CALL BAR */
 .call-bar {
   position: fixed;
   bottom: 0;
@@ -105,12 +112,13 @@ body {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Fire Alarm Installations</h1>
-    <p>UK Based • 24/7 Callouts</p>
-    <a href="tel:07415202373" class="btn">Call Now</a>
+    <h1>DTL Instalations LTD</h1>
+    <p>Fire Alarms • Electrical Work • Fully Compliant • 24/7 Callouts</p>
+    <a href="tel:07415202373" class="btn">📞 Call Now</a>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="section">
   <h2>Our Services</h2>
 
@@ -123,10 +131,22 @@ body {
 
 </section>
 
-<!-- CONTACT -->
+<!-- TRUST / ABOUT -->
 <section class="section">
+  <h2>Why Choose Us</h2>
+
+  <div class="card">✔ Qualified & Experienced Electricians</div>
+  <div class="card">✔ Domestic & Commercial Work</div>
+  <div class="card">✔ Fast & Reliable Service</div>
+  <div class="card">✔ Midlands Based Coverage</div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section contact">
   <h2>Contact</h2>
   <p>📞 07415 202373</p>
+  <p>📍 Midlands, UK</p>
 </section>
 
 <!-- STICKY CALL BUTTON -->
