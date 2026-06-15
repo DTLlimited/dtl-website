@@ -38,18 +38,6 @@ nav a:hover {
 }
 
 /* HERO SECTION */
-.hero {
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-  padding-left:8%;
-  position:relative;
-  overflow:hidden;
-}
-
-/* IMAGE FIX (PERFECT BALANCE) */
 .hero::before {
   content:"";
   position:absolute;
@@ -59,10 +47,15 @@ nav a:hover {
   height:100%;
 
   background:
-    linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3)),
-    url('hero.png') no-repeat right center;
+    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+    url('hero.png');
 
-  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* 🔥 THIS IS THE MAGIC FIX */
+  background-size: 100% auto;
+  background-position: center;
+
   z-index:0;
 }
 
